@@ -36,7 +36,7 @@
 
 @media screen and (max-width: 768px) {
     #ffimg img {
-        top: 40vh ; /* 가로 폭이 768px 이하일 때 */
+        top: 50vh ; /* 가로 폭이 768px 이하일 때 */
         width: 90%;
         left: 5vw; /* 기본 좌측 위치 */
     }
