@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'Orbit-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#bg_img {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* 화면에 고정 */
+  top: 0; /* 화면의 최상단 */
+  left: 0; /* 화면의 최좌측 */
+  z-index: -100; /* 다른 모든 요소 뒤로 배치 */
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbit-Regular';
+  
+  
+  
+  
+}
+
+/* 왼쪽 섹션 (이미지) */
+#main-1 {
+  display: flex;
+  justify-content: top;
+  align-items: top;
+  
+}
+
+#main-1 img {
+  width: 50%;
+  height: auto;
+  position: fixed; /* 화면에 고정 */
+  top: 3vh; /* 기본 상단 위치 */
+  left: 50vw; /* 기본 좌측 위치 */
+  
+}
+
+@media screen and (max-width: 768px) {
+  #main-1 img {
+      top: 43vh ; /* 가로 폭이 768px 이하일 때 */
+      width: 90%;
+      left: 8vw; 
+  }
+}
+
+
+
+
+
+
+
+
+/* 텍스트를 감싸는 컨테이너 */
+.text-container {
+  display: flex;
+  flex-direction: column; /* 텍스트를 세로로 배치 */
+  overflow: visible; /* 텍스트 잘림 방지 */
+  align-items: flex-start;
+}
+
+.text {
+  width: 45vw; /* 가로 화면의 45% */
+  color: aliceblue;
+  font-size: 1.2vw;
+  line-height: 2.5; /* 줄 간격 설정 */
+  margin-left: 3.5vw;
+}
+
+/* 반응형 디자인: 가로 폭이 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .text {
+    width: 90%;
+    font-size: 2.3vw;
+    line-height: 2.5; /* 줄 간격 동일 유지 */
+    margin-left: 3.5vw;
+  }
+}
+
+
+
+#right-section {
+  margin-left: 3vw;
+  margin-top: 2vh;
+}
+
+#right-section img {
+  align-items: center;
+  justify-content: center;
+  width: 8vw;
+  
+  
+}
+
+.about-icon {
+  cursor: pointer; /* 클릭 가능한 아이콘임을 표시 */
+  transition: transform 0.2s ease;
+}
+
+.about-icon:hover {
+  transform: scale(1.1); /* 마우스를 올리면 확대 */
+}
