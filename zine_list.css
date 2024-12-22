@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'Orbit-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#bg_img {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* 화면에 고정 */
+  top: 0; /* 화면의 최상단 */
+  left: 0; /* 화면의 최좌측 */
+  z-index: -100; /* 다른 모든 요소 뒤로 배치 */
+}
+
+
+#homebutton {
+  margin-left: 3vw;
+  margin-top: 3vh;
+}
+
+#homebutton img {
+  align-items: center;
+  justify-content: center;
+  width: 8vw;
+  
+  
+}
+
+
+
+.container {
+  z-index: 10;
+  width: auto;
+  height: 80%;
+  display: flex;
+  
+  overflow: hidden;
+  position: relative;
+  margin-top: 1.5vw;
+}
+
+.image-list {
+  display: flex; /* 가로로 정렬 */
+  transition: transform 0.2s ease-out; /* 부드러운 스크롤 효과 */
+}
+
+.scroll-image {
+  width: 30vw; 
+  height: auto;
+  flex-shrink: 0; /* 이미지 크기를 줄이지 않도록 설정 */
+  margin-top: 3vw;
+}
+
+/* 세로가 긴 화면에 대한 미디어 쿼리 */
+@media screen and (max-width: 768px) {
+  .container {
+      justify-content: center; /* 가로 방향 중앙 정렬 추가 */
+      margin-top: 30vw; /* 세로 화면에 적합한 여백 */
+      display: flex;
+      width: 100%;
+      flex-shrink: 0;
+  }
+
+  
+
+}

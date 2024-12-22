@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'Orbit-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#bg_img {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* 화면에 고정 */
+    top: 0; /* 화면의 최상단 */
+    left: 0; /* 화면의 최좌측 */
+    z-index: -100; /* 다른 모든 요소 뒤로 배치 */
+}
+
+#bg_img img {
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+/* 기본 스타일 (가로 화면 비율) */
+#ffimg img {
+    width: 70%;
+    height: auto;
+    position: fixed; /* 화면에 고정 */
+    top: 2.5vh; /* 기본 상단 위치 */
+    left: 3vw; /* 기본 좌측 위치 */
+}
+
+@media screen and (max-width: 768px) {
+    #ffimg img {
+        top: 30vh ; /* 가로 폭이 768px 이하일 때 */
+        width: 90%;
+        left: 5vw; /* 기본 좌측 위치 */
+    }
+}
+
+
+#fflogo img {
+    width: 50vw;
+    height: auto;
+    position: fixed; /* 화면에 고정 */
+    top: 5vh; /* 화면의 최상단 */
+    left: 48vw; /* 화면의 최좌측 */
+}
+
+@media screen and (max-width: 768px) {
+    #fflogo img {
+        width: 80vw;
+        height: auto;
+        position: fixed; /* 화면에 고정 */
+        top: 5vh; /* 화면의 최상단 */
+        left: 10vw; /* 화면의 최좌측 */
+    }
+}
+
+#buttons {
+    position: fixed;
+    top: 30vh; /* 화면 높이의 30% 지점에서 시작 */
+    right: 5vw; /* 화면 오른쪽에서 5vw 떨어짐 */
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    
+}
+
+@media screen and (max-width: 768px) {
+    #buttons {
+    position: fixed;
+    top: 20vh; /* 화면 높이의 30% 지점에서 시작 */
+    right: 5vw; /* 화면 오른쪽에서 5vw 떨어짐 */
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    }
+}
+
+#icons {
+    list-style-type: none; /* 기본 목록 스타일 제거 */
+    margin : 0;
+    padding: 0;
+}
+
+#icons li {
+    margin: 0;
+    padding: 0;
+}
+
+#icons img {
+    width: 6.5vw; /* 민트색 아이콘의 크기 */
+    height: auto;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    #icons img {
+    
+    width: 10vw; /* 민트색 아이콘의 크기 */
+    height: auto;
+    top: 20vh; /* 화면 높이의 30% 지점에서 시작 */
+    right: 5vw; /* 화면 오른쪽에서 5vw 떨어짐 */
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    cursor: pointer;
+    }
+}
+
+#linkbuttons {
+    position: fixed;
+    bottom: 5vh; /* 화면의 아래에서 5vh 떨어짐 */
+    right: 5vw; /* 화면의 오른쪽에서 5vw 떨어짐 */
+    display: flex;
+    flex-direction: row; /* 가로 정렬 */
+    align-items: center;
+    gap: 4vw; /* 버튼 사이의 간격 */
+}
+
+#linkicons {
+    list-style-type: none; /* 기본 목록 스타일 제거 */
+    margin: 0;
+    padding: 0;
+    display: flex; /* 가로 배치 */
+}
+
+#linkicons li {
+    margin: 0;
+    padding: 0;
+}
+
+#linkicons img {
+    width: 10vw; 
+    height: auto;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    #linkicons img {
+    
+    width: 15vw; /* 민트색 아이콘의 크기 */
+    height: auto;
+    top: 20vh; /* 화면 높이의 30% 지점에서 시작 */
+    right: 5vw; /* 화면 오른쪽에서 5vw 떨어짐 */
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    }
+}
+
+
+
+/* 툴팁 트리거를 감싸는 부모 컨테이너 */
+.tooltip-wrapper {
+    position: relative; /* 툴팁 위치를 트리거 기준으로 설정 */
+    display: inline-block; /* 요소를 인라인 블록으로 */
+  }
+  
+  /* 툴팁 기본 스타일 */
+  .tooltip {
+    position: absolute;
+    top: -120%; /* 트리거 아래에 위치 */
+    right: -100%;
+    
+    width: max-content; /* 툴팁 내용에 따라 크기 조정 */
+    background-color: rgb(104, 255, 242); /* 흰색 배경 */
+    color: black;
+    padding: 10px 15px; /* 내부 여백 */
+    border-radius: 30px; /* 숫자가 클수록 더 둥글게 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 약간의 그림자 효과 */
+    font-family: 'Orbit-Regular', sans-serif;
+    font-size: 10px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 0; /* 초기 상태에서 숨김 */
+    visibility: hidden; /* 마우스가 올려지기 전에는 보이지 않음 */
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+  
+  /* 툴팁 안의 텍스트 스타일 */
+  .tooltip p {
+    margin: 1vw 0;
+    font-size: 2vw;
+
+  }
+  
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+
+
+.circle {
+    position: fixed;
+    width: 160px;
+    height: 160px;
+    pointer-events: none; /* 클릭 방지 */
+}
