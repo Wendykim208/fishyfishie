@@ -60,7 +60,7 @@
 /* 세로가 긴 화면에 대한 미디어 쿼리 */
 @media screen and (max-width: 768px) {
   .container {
-      justify-content: center; /* 가로 방향 중앙 정렬 추가 */
+      justify-content: flex-start; /* 가로 방향 중앙 정렬 추가 */
       margin-top: 30vw; /* 세로 화면에 적합한 여백 */
       display: flex;
       width: 100%;
