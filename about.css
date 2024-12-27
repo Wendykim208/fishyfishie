@@ -77,6 +77,10 @@ body {
   margin-left: 3.5vw;
 }
 
+.text > p {
+  line-height: 2.5;
+}
+
 /* 반응형 디자인: 가로 폭이 768px 이하일 때 */
 @media screen and (max-width: 768px) {
   .text {
