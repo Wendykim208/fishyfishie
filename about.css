@@ -46,7 +46,7 @@ body {
   
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
   #main-1 img {
       top: 43vh ; /* 가로 폭이 768px 이하일 때 */
       width: 90%;
